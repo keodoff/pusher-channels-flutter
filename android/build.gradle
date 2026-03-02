@@ -3,14 +3,14 @@ group 'com.pusher.channels_flutter'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.9.10'
+    ext.kotlin_version = '2.2.20'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.7.0'
+        classpath 'com.android.tools.build:gradle:8.12.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -30,7 +30,7 @@ android {
         namespace = "com.pusher.channels_flutter"
     }
 
-    compileSdkVersion 34
+    compileSdkVersion 36
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
@@ -52,12 +52,8 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    api 'com.google.code.gson:gson:2.+'
-    implementation "com.google.code.gson:gson:2.9.1"
-    implementation "org.java-websocket:Java-WebSocket:1.5.3"
+    api 'com.google.code.gson:gson:2.13.2'
+    implementation "com.google.code.gson:gson:2.13.2"
+    implementation "org.java-websocket:Java-WebSocket:1.6.0"
 
-    testImplementation "org.mockito:mockito-all:1.8.5"
-    testImplementation "org.powermock:powermock-module-junit4:1.4.11"
-    testImplementation "org.powermock:powermock-api-mockito:1.4.11"
-    testImplementation "com.google.truth:truth:1.0.1"
 }
